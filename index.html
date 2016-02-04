@@ -43,23 +43,18 @@
 				<section>
 					<h1>Managing TripleO and OpenStack with ManageIQ</h1>
 					<p><small>Created by Ladislav Smola </small></p>
-
-					<ul>
-						<li class="fragment">https://github.com/Ladas</li>
-						<li class="fragment">Ask me on: https://gitter.im/ManageIQ/manageiq</li>
-					</ul>
 				</section>
 
                 <section>
 					<p>Control All the Things. Automate, optimize, and control your cloud and virtualization services</p>
-				</section>	
+				</section>
 
 				<section>
-					<h2>OpenStack cloud</h2> 
+					<h2>OpenStack cloud</h2>
 
 					<ul>
 						<li class="fragment">Inventory collection</li>
-						<li class="fragment">Capacity and utilization</li></li>
+						<li class="fragment">Capacity and utilization</li>
 						<li class="fragment">Smart state analysis(fleecing)</li>
 						<li class="fragment">Control and Policies</li>
 						<li class="fragment">Drift state</li>
@@ -67,13 +62,13 @@
 					</ul>
 				</section>
 
-                <section>
-					<h2>Inventory collection</h2>
-				</section>
-
 				<section>
-                    <section>
-						<h2>Provider Inventory</h2>
+					<section>
+						<h2>Inventory collection</h2>
+					</section>
+
+					<section>
+						<p>Provider Inventory</p>
 					</section>
 
 					<section>
@@ -83,15 +78,13 @@
 					<section>
 						<img class="stretch" data-src="images/cloud_inventory_properties.png">
 					</section>
-					
+
 					<section>
 						<img class="stretch" data-src="images/cloud_inventory_1.png">
 					</section>
-				</section>
-				
-				<section>
+
                     <section>
-						<h2>Instance Inventory</h2>
+						<p>Instance Inventory</p>
 					</section>
 
 					<section>
@@ -101,7 +94,7 @@
 					<section>
 						<img class="stretch" data-src="images/cloud_inventory_vm_properties.png">
 					</section>
-					
+
 					<section>
 						<img class="stretch" data-src="images/cloud_inventory_vm_relationships.png">
 					</section>
@@ -115,15 +108,15 @@
 					<section>
 						<img data-src="images/cloud_metrics_daily.png">
 					</section>
-					
+
 					<section>
 						<img data-src="images/cloud_metrics_hourly.png">
 					</section>
-					
+
 					<section>
 						<img class="stretch" data-src="images/cloud_metrics_hourly_cpu_memory.png">
 					</section>
-					
+
 					<section>
 						<img class="stretch" data-src="images/cloud_metrics_hourly_disk_network.png">
 					</section>
@@ -132,13 +125,13 @@
 				<section>
 					<section>
 						<h2>Smart state analysis</h2>
-						<p class="fragment">In cloud, we don't have access to VMs. We don't own the private key</p>
+						<p class="fragment">In cloud, we don't have access to the VMs. We don't own the private keys.</p>
 						<ul>
 							<li class="fragment">Snapshots the VM</li>
 							<li class="fragment">Mount the VM</li>
 							<li class="fragment">Perform Smart state analysis of the files</li>
 							<li class="fragment">Show users, groups, packages, init processes and files</li>
-							<li class="fragment">You need enough /tmp space in your apliance!</li>
+							<li class="fragment">You need enough /tmp space in your appliance!</li>
 						</ul>
 					</section>
 				</section>
@@ -153,14 +146,14 @@
 				<section>
 					<section>
 						<h2>Control and Policies</h2>
-						<p class="fragment">We can leverage all the entities we collect from Inventory collection and Fleecing</p>
+						<p class="fragment">We can leverage all the entities we collect by Inventory collection and Fleecing</p>
 						<ul>
 							<li class="fragment"><b>Alerts</b> - notifications using email, SNMP traps, internal events</li>
-							<li class="fragment"><b>Compliance</b> - passs/fail check, reporting (e.g. make sure none of my VMs suffer to HeartBleed, ShellShock, etc.)</li>
-							<li class="fragment"><b>Policy enforcement</b> - E.g. someone tries to clone a VM that is not allowed, ManageIQ stops the action</li>
+							<li class="fragment"><b>Compliance</b> - pass/fail check, reporting (e.g. make sure none of my VMs suffer to HeartBleed, ShellShock, etc.)</li>
+							<li class="fragment"><b>Policy enforcement</b> - E.g. someone tries to clone a VM that is not allowed to clone, ManageIQ stops the action</li>
 						</ul>
 					</section>
-				</section>		
+				</section>
 
 				<section>
 					<h2>Automate</h2>
@@ -169,28 +162,28 @@
 
                 <section>
 					<h2>Automate example showing deployment of the VM</h2>
-					
+
 					<ul>
 						<li class="fragment">In the UI, we fill what VMs we want to deploy, picking flavor, network, number of VMs, etc. Similar to Horizon.</li>
 						<li class="fragment">Deploying generates a request, that has to be approved.</li>
 						<li class="fragment">Approving invokes provisioning workflow.</li>
-						<li class="fragment">After finishing, we can invoke another workflows, e.g. ansible tower.</li>
+						<li class="fragment">After finishing provisioning workflow, we can invoke another workflow, e.g. Ansible Tower.</li>
 					</ul>
                 </section>
-                        
+
                 <section>
 					<section>
 						<h2>Request approval workflow</h2>
 					</section>
-					
+
 					<section>
 						<img class="stretch" data-src="images/automate_provision_request_tree.png">
-					</section>	
-					
+					</section>
+
 					<section>
 						<img class="stretch" data-src="images/automate_provision_request_state_machine.png">
 					</section>
-					
+
 					<section>
 						<img class="stretch" data-src="images/automate_provision_request_validate_method.png">
 					</section>
@@ -200,94 +193,94 @@
 					<section>
 						<h2>Provisioning workflow</h2>
 					</section>
-					
+
 					<section>
 						<img class="stretch" data-src="images/automate_provision_tree.png">
-					</section>	
-					
+					</section>
+
 					<section>
 						<img class="stretch" data-src="images/automate_provision_state_machine.png">
-					</section>	
-					
+					</section>
+
 					<section>
 						<p>Placement</p>
-					</section>	
-					
+					</section>
+
 					<section>
 						<img class="stretch" data-src="images/automate_placement_tree.png">
-					</section>	
-					
+					</section>
+
 					<section>
 						<img class="stretch" data-src="images/automate_placement_code.png">
-					</section>	
-					
+					</section>
+
 					<section>
 						<p>Provision</p>
-					</section>	
-					
+					</section>
+
 					<section>
 						<img class="stretch" data-src="images/automate_provision_method.png">
-					</section>	
-					
+					</section>
+
 					<section>
 						<img class="stretch" data-src="images/automate_provision_code.png">
-					</section>	
-					
+					</section>
+
 					<section>
 						<p>Post provision</p>
-					</section>	
-					
+					</section>
+
 					<section>
 						<img class="stretch" data-src="images/automate_post_provision_tree.png">
-					</section>	
-					
+					</section>
+
 					<section>
 						<img class="stretch" data-src="images/automate_post_provision_code.png">
-					</section>	
-					
+					</section>
+
 					<section>
 						<p>Override the Placement, to pick the most utilized private network</p>
-					</section>	
-					
+					</section>
+
 					<section>
 						<img class="stretch" data-src="images/automate_placement_tree_override.png">
-					</section>	
-					
+					</section>
+
 					<section>
 						<img class="stretch" data-src="images/automate_placement_code_override_1.png">
-					</section>	
-					
+					</section>
+
 					<section>
 						<img class="stretch" data-src="images/automate_placement_code_override_2.png">
-					</section>	
-					
+					</section>
+
 					<section>
 						<p>Override the Post provision, to retry when deployed to full private network</p>
 					</section>
-					
+
 					<section>
 						<img class="stretch" data-src="images/automate_post_provision_tree_override.png">
-					</section>	
-					
+					</section>
+
 					<section>
 						<img class="stretch" data-src="images/automate_post_provision_code_override_1.png">
-					</section>	
-					
+					</section>
+
 					<section>
 						<img class="stretch" data-src="images/automate_post_provision_code_override_2.png">
-					</section>	
-					
+					</section>
+
 					<section>
 						<p>When deployment to private network succeeds, autoassociate floating ip</p>
 					</section>
-					
+
 					<section>
 						<img class="stretch" data-src="images/automate_post_provision_code_override_3.png">
-					</section>	
-					
+					</section>
+
 					<section>
 						<img class="stretch" data-src="images/automate_post_provision_code_override_4.png">
-					</section>		
+					</section>
                 </section>
 
 				<section>
@@ -304,12 +297,12 @@
 				</section>
 
                 <section>
-					<h2>Inventory collection</h2>
-				</section>
+                    <section>
+                        <h2>Inventory collection</h2>
+                    </section>
 
-                <section>
 					<section>
-						<h2>Provider Inventory</h2>
+						<p>Provider Inventory</p>
 					</section>
 
 					<section>
@@ -323,11 +316,9 @@
 					<section>
 						<img class="stretch" data-src="images/infra_inventory_rel_and_sm.png">
 					</section>
-				</section>
 
-				<section>
 					<section>
-						<h2>Deployment Role Inventory</h2>
+						<p>Deployment Role Inventory</p>
 					</section>
 
 					<section>
@@ -349,11 +340,9 @@
 					<section>
 						<img class="stretch" data-src="images/infra_inventory_roles_detail_openstack_status.png">
 					</section>
-				</section>
 
-				<section>
 					<section>
-						<h2>Nodes Inventory</h2>
+						<p>Nodes Inventory</p>
 					</section>
 
 					<section>
@@ -364,12 +353,12 @@
 						<img data-src="images/infra_inventory_hosts_detail.png">
 					</section>
 
-					<section>
-						<img class="stretch" data-src="images/infra_inventory_hosts_detail_devices.png">
-					</section>
+                    <section>
+                        <img class="stretch" data-src="images/infra_inventory_hosts_properties.png">
+                    </section>
 
 					<section>
-						<img class="stretch" data-src="images/infra_inventory_hosts_properties.png">
+						<img class="stretch" data-src="images/infra_inventory_hosts_detail_devices.png">
 					</section>
 
 					<section>
@@ -377,32 +366,34 @@
 					</section>
 
 					<section>
-						<img class="stretch" data-src="images/infra_inventory_hosts_compliance_security_configuration.png">
-					</section>
-
-					<section>
-						<img class="stretch" data-src="images/infra_inventory_hosts_openstack_status.png">
-					</section>
-                </section>
-
-                <section>
-					<section>
-						<h2>Smart state analysis</h2>
-					</section>
-
-					<section>
-						<img class="stretch" data-src="images/smart_state_analysis_profile.png">
+						<p>Smart state analysis details in the node</p>
 					</section>
 
 					<section>
 						<img class="stretch" data-src="images/smart_state_collected_details.png">
 					</section>
+
+                    <section>
+                        <img class="stretch" data-src="images/infra_inventory_hosts_openstack_status.png">
+                    </section>
 				</section>
 
 				<section>
 					<section>
-						<h2>Smart state error in service configuration</h2>
+						<h2>Smart state</h2>
 					</section>
+
+                    <section>
+                        <p>Specify what files to collect by smartstate</p>
+                    </section>
+
+                    <section>
+                        <img class="stretch" data-src="images/smart_state_analysis_profile.png">
+                    </section>
+
+                    <section>
+                        <p>openstack-nova-compute service on a node went down.</p>
+                    </section>
 
 					<section>
 						<img data-src="images/smart_state_role_detail.png">
@@ -463,55 +454,55 @@
 					<section>
 						<img class="stretch" data-src="images/pick_hosts_from_list.png">
 					</section>
- 
+
 					<section>
 						<img class="stretch" data-src="images/select_action_from_list.png">
 					</section>
-					
+
 					<section>
 						<img data-src="images/compare_hosts_pick.png">
 					</section>
-					
+
 					<section>
 						<p>Host properties diff</p>
 					</section>
-					
+
 					<section>
 						<img class="stretch" data-src="images/compare_hosts_properties.png">
 					</section>
-					
+
 					<section>
 						<p>Host services diff</p>
 					</section>
-					
+
 					<section>
 						<img class="stretch" data-src="images/compare_hosts_services.png">
 					</section>
-					
+
 					<section>
 						<p>Host files diff</p>
 					</section>
-					
+
 					<section>
 						<img class="stretch" data-src="images/compare_hosts_files_1.png">
 					</section>
-					
+
 					<section>
 						<img class="stretch" data-src="images/compare_hosts_files_2.png">
 					</section>
-					
+
 					<section>
 						<p>Host custom attributes diff</p>
 					</section>
-					
+
 					<section>
 						<img class="stretch" data-src="images/compare_hosts_attribute_1.png">
 					</section>
-					
+
 					<section>
 						<img class="stretch" data-src="images/compare_hosts_attribute_2.png">
 					</section>
-					
+
 				</section>
 
                 <section>
@@ -522,7 +513,7 @@
                     <section>
 						<p>Define an alert</p>
 					</section>
-                    
+
 					<section>
 						<img data-src="images/director_autoscale_alarm.png">
 					</section>
@@ -530,7 +521,7 @@
 					<section>
 						<img class="stretch" data-src="images/director_autoscale_alarm_event.png">
 					</section>
-					
+
 					<section>
 						<p>Create alert profile</p>
 					</section>
@@ -542,11 +533,11 @@
                     <section>
 						<p>Assign the alert profile to the compute deployment role</p>
 					</section>
-                      
+
 					<section>
 						<img class="stretch" data-src="images/director_autoscale_alarm_profile_assignment.png">
 					</section>
-					
+
 					<section>
 						<p>Create a custom event handler</p>
 					</section>
@@ -554,7 +545,7 @@
 					<section>
 						<img class="stretch" data-src="images/director_autoscale_automate_event_handler.png">
 					</section>
-					
+
 					<section>
 						<p>Create a custom class, instance and method for autoscaling</p>
 					</section>
@@ -572,9 +563,9 @@
 					</section>
 
 					<section>
-						<p>Observe the autoscaling in timelines</p>
+						<p>Observe an autoscaling in the timeline</p>
 					</section>
-                    
+
 					<section>
 						<img class="stretch" data-src="images/director_autoscale_timeline.png">
 					</section>
@@ -592,17 +583,24 @@
 					</section>
 
                     <section>
-						<p>Observe the autoscaling in charts</p>
+						<p>Observe an autoscaling in the charts</p>
 					</section>
 
 					<section>
 						<img class="stretch" data-src="images/director_autoscale_metrics.png">
 					</section>
 				</section>
-				
+
 				<section>
 				    <h2>Q&A</h2>
-		        </section>	
+
+				    <ul> Contacts:
+						<li>My GitHub https://github.com/Ladas</li>
+						<li>Ask me/us directly on: https://gitter.im/ManageIQ/manageiq</li>
+						<li>ManageIQ main repo https://github.com/ManageIQ/manageiq</li>
+                        <li>Yes, we are hiring!</li>
+					</ul>
+		        </section>
 			</div>
 		</div>
 
